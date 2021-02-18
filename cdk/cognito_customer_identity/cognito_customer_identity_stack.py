@@ -1,4 +1,5 @@
 from aws_cdk import core
+from cognito_user_pool import CognitoCustomerPool
 
 
 class CognitoCustomerIdentityStack(core.Stack):
@@ -7,3 +8,4 @@ class CognitoCustomerIdentityStack(core.Stack):
         super().__init__(scope, construct_id, **kwargs)
 
         # The code that defines your stack goes here
+        CognitoCustomerPool(self, "UserPool")
